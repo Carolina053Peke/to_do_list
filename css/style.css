@@ -1,0 +1,252 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: #e1e1e1;
+    border: 3px solid var(--secundary);
+}
+
+::-webkit-scrollbar-track-piece{
+    background-color: var(--primary);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #21618C;
+}
+
+::-webkit-scrollbar-thumb:hover:active{
+    background-color: #1F657C;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+.container{
+    width: 100%;
+    overflow: hidden;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #21618C;
+    padding: 5px 10px;
+    color: #FFF;
+    position: relative;
+}
+
+.title{
+    text-align: left;
+    font-size: 2em;
+    margin: 0;
+}
+
+.refresh-container{
+    display: block;
+}
+
+.fa-sync-alt, .fa-times-circle{
+    margin: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.date{
+    font-size: 1.7em;
+    float: left;
+    overflow: hidden;
+    margin: 0 0 15px 0;
+}
+
+.categories{
+    display: flex;
+    justify-content: space-between;
+    float: right;
+    overflow: hidden;
+    padding: 2px 5px 5px;
+}
+
+.normal, .done, .not-done{
+    background-color: #247C98 ;
+    border: none;
+    color: #FFF;
+    padding: 5px;
+    border-radius: .5em;
+    cursor: pointer;
+    outline: none;
+}
+
+.normal:hover, .done:hover, .not-done:hover{
+    background-color: #217590;
+}
+
+.normal:target, .done:target, .not-done:target{
+    background-color: #1F657C;
+    outline: none;
+}
+
+.fail{
+
+    height: 3em;
+    background-color: #ec3b31;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    display: none;
+}
+
+.failed-text{
+    position: relative;
+    top: 25%;
+}
+
+.content{
+    width: 100%;
+    height: 375px;
+    border-radius: 2px;
+    overflow-y: auto;
+    background-color: #FFF;
+}
+
+.list{
+    list-style: none;
+    padding-left: 20 ;
+}
+
+.item{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 3px;
+    margin: 20px auto 40px;
+    box-shadow: -6px 14px 24px 1px rgba(172,172,172,1);
+}
+
+.fa-circle, .fa-check-circle{   
+    align-items: center;
+    font-size: 1.3em;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.fa-check-circle{
+    color: #2AE500;
+}
+
+.text, .edit-container{
+    width: 80%;
+    word-break: break-all;
+    padding: 0 10px;
+    display: inline-block;
+    margin: 0;  
+}
+
+.buttons{
+    align-items: center;
+    order: 1;
+}
+
+
+.fa-edit, .fa-trash-alt{
+    margin:  0 5px 0 10px;
+    color: #2AE500;
+    float: right;
+    cursor: pointer;
+}
+
+.fa-edit:hover{
+    color: #26C101;
+}
+
+.fa-trash-alt{
+    color: #E10000;
+}
+
+.fa-trash-alt:hover{
+    color: #AF1717;
+}
+
+.add-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid #ACACAC;
+    background-color: #FFF;
+}
+
+.input, .edit-input{
+    width: 95%;
+    margin: 10px 5px 0;
+    border: none;
+    border-bottom: 1px solid #ACACAC;
+    outline: none;
+}
+
+.edit-input{
+    width: 70%;
+}
+
+.fa-plus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background-color: #21618C;
+    color: #FFF;
+    
+}
+
+.fas.fa-plus-circle::before{
+    width: 25px;
+    color: #21618C;
+    border: none;
+    margin: auto;
+    cursor: pointer;
+}
+.submit-edit{
+    background: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    color:#ACACAC;
+}
+
+@media only screen and (max-width: 900px){
+    *{
+        font-size: 12px;
+    }
+
+    .add-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input{
+        width: 85%;
+    }
+}
